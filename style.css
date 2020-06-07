@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    display: block;
+    background-color: white;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#PageContainer {
+    overflow: hidden;
+}
+
+.main-content {
+    position: relative;
+}
+
+.page-width {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+header {
+    display: block;
+    margin-top: 10px;
+}
+
+.blmgif {
+    padding-bottom: 30px;
+    font-size: 20pt;
+    width: auto;
+    height: 100%;
+}
+
+h1 {
+    text-align: left;
+    font-size: 1.42857em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    color: black;
+    font-style: normal;
+    margin: 0 0 0.71429em;
+}
+
+h3 {
+    margin-top: 0.71429em;
+    margin-bottom: 20px;
+    font-size: 1.12286em;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+h3 a {
+    text-decoration: none;
+}
+
+.text-link {
+    color: #000;
+    border-bottom: 1px solid #000;
+    display: inline;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.btn {
+    font-size: 12pt;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    text-decoration: none;
+}
+.back-button__link {
+    white-space: normal;
+}
+
+@media only screen and (min-width: 750px) {
+    .medium-up--one-half {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+    .small--one-whole {
+        width: 100%;
+    }
+}
+
+/*===================================
+	Anonymize Photographs
+===================================*/
+#anon_page {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#transfer-canvas {
+    position: absolute;
+    top: -3000px;
+    width: 100%;
+}
+
+#displacement-canvas {
+    position: absolute;
+    top: -3000px;
+    width: 100%;
+}
+
+#blur-canvas {
+    position: absolute;
+    top: -3000px;
+    width: 100%;
+}
+
+#anon-canvas {
+    width: 100%;
+    vertical-align: middle;
+}
+
+#canvas_container {
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#select {
+    margin: 10px;
+    text-align: center;
+}
+
+#select input {
+    background-color: transparent;
+    outline: 2px solid black;
+}
+
+#selectImageInput {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#selectImageInput + label {
+    border: 2px solid black;
+    border-radius: 5px;
+    vertical-align: middle;
+    color: black;
+    display: inline-block;
+    padding: 5px;
+    transition: color .2s, background-color .2s;
+}
+
+#selectImageInput:focus + label,
+#selectImageInput + label:hover {
+    background-color: black;
+    color: white;
+}
+
+button {
+    font-size: 14px;
+    font-family: Akko,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    line-height: 1.6;
+}
+
+#savebtn {
+    vertical-align: middle;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: color .2s, background-color .2s;
+}
+
+#savebtn:disabled {
+    border: 2px solid gray;
+    color: gray;
+}
+
+#savebtn:focus:not([disabled]),
+#savebtn:hover:not([disabled]) {
+    background-color: black;
+    color: white;
+}
+
+.tools {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 25px;
+}
+
+@media only screen and (max-width: 749px) {
+    .tools {
+        min-height: 80px;
+        width: 100%;
+    }
+}
+
+.tools > fieldset {
+    position: absolute;
+    border: none;
+}
+
+@media only screen and (min-width: 750px) {
+    .tools > fieldset {
+        right: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+    .tools > fieldset {
+        bottom: 15px;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%);
+    }
+}
+
+.tools > fieldset > label {
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+.brushSize {
+    position: absolute;
+}
+
+@media only screen and (min-width: 750px) {
+    .brushSize {
+        left: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+    .brushSize {
+        top: 0px;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%);
+    }
+}
+
+
+#brushSlider {
+    display: inline-block;
+    padding: 0px;
+    -webkit-appearance: none;
+    width: 65%;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    background: transparent;
+}
+
+
+@media only screen and (max-width: 749px) {
+    #brushSlider {
+        width: 50%;
+    }
+}
+
+#brushSlider:hover {
+    opacity: 1;
+}
+
+#brushSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+
+#brushSlider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+
+#processing_label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12pt;
+    color: black;
+    display: none;
+}
+
+.rte ul {
+    list-style: disc outside;
+}
+.rte ul, .rte ol {
+    margin: 0 0 10px 20px;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
