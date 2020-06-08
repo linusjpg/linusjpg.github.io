@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class=" supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface supports-pointerevents" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="theme-color" content="rgba(0,0,0,0)">
+
+<title>
+Black Lives Matter – New Day Same Pain
+</title>
+<meta name="description" content="Resources to learn with and how you can help.">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+<link href="../style.css" rel="stylesheet" type="text/css" media="all">
+
+<body id="black-lives-matter" class="template-page">
+
+<div class="page-container">
+    <div class="medium-up--one-half small--one-whole" style="margin: 0 auto; padding-left: 20px;">
+        <a href="../index.html" class="btn back-button__link">
+            <i class="back-arrow"></i>
+            <span>Back</span>
+        </a>
+    </div>
+    <header>
+        <h1 class="text-center">Anonymize Photographs</h1>
+    </header>
+    <div id="anon_page" class="medium-up--one-half small--one-whole">
+
+        <div id="pretext">
+            <div style="padding-top: 20px; padding-bottom: 20px;" class="text-center"><a class="text-center text-link" href="https://drive.google.com/file/d/1hFvB_cGM_TfVVNuXV-Jg6mO4DIPLvNoC/view to this https://newdaysamepain.com/pages/anonymize ">Do No Harm: Photographing Police Brutality Protests</a></div>
+        This page is supposed to give people the necessary tools to easily erase identifiable information from a photograph to protect the author's as well as the depicted individuals' privacy. Exif data is removed automatically in order to prevent leaking extremely sensitive metadata like the location. All pixels underneath the blur each get scattered into a random direction making any information unintelligible while the blur maintains an optical sense for aestethic reasons (<a class="text-link" href="https://cdn.shopify.com/s/files/1/0298/7910/7716/t/15/assets/blur_example.jpg">example</a>).<br>
+        <div style="padding-top: 20px; padding-bottom: 20px;" class="text-center"><b class="text-center">The photographs will never leave your device.<br> All image processing is done locally on your end.</b></div>
+        </div>
+
+        <div id="select">
+        <input type="file" id="selectImageInput" name="selectImageInput" accept="image/jpeg"/>
+        <label for="selectImageInput">Click To Select</label>
+        <button id="savebtn" disabled>Save Image</button>
+        </div>
+
+        <div class="tools">
+        <div class="brushSize">
+            <label for="brushSlider">Brush Size:</label>
+            <input type="range" min="30" max="150" value="90" class="slider" id="brushSlider">
+        </div>
+        <fieldset>
+            <input type="radio" id="blur_brush" name="tool" value="blur_brush" checked>
+            <label for="blur_brush">Blur Brush</label>
+            <input type="radio" id="undo_brush" name="tool" value="undo_brush">
+            <label for="undo_brush">Undo Brush</label>
+        </fieldset>
+        </div>
+
+        <div id="canvas_container">
+        <p id="processing_label">Processing...</p>
+        <canvas id="anon-canvas"></canvas>
+        <canvas id="transfer-canvas"></canvas>
+        <canvas id="displacement-canvas"></canvas>
+        </div>
+
+        <script src="./blur.js"></script>
+        <script src="./anonymize.js"></script>
+    </div>
+    </div>
+
+
+</div>
+</body>
+</html>

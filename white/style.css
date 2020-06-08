@@ -136,6 +136,24 @@ h3 a {
     width: 12px;
     transform-origin: right top;
 }
+
+
+.embed-block {
+    font-size: 8pt;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.embed-block > p {
+    margin: 0px;
+}
+
+.embed-block > p > u:hover {
+    color: rgb(185, 185, 185) !important;
+}
+
 /*===================================
 	Anonymize Photographs
 ===================================*/
