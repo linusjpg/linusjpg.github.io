@@ -137,10 +137,6 @@ h3 a {
 
 .embed-block {
     font-size: 8pt;
-    text-align: right;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
 }
 
 .embed-block > p {
